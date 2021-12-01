@@ -1,0 +1,415 @@
+{
+  "frames": [
+    {
+      "filename": "ahbeng side left 1",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 125
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 57,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 58,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side right 1",
+      "frame": {
+        "x": 0,
+        "y": 125,
+        "w": 57,
+        "h": 125
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 57,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side right 5",
+      "frame": {
+        "x": 0,
+        "y": 250,
+        "w": 58,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 58,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 58,
+        "h": 124
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side left 3",
+      "frame": {
+        "x": 57,
+        "y": 0,
+        "w": 57,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 57,
+        "h": 124
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng back 2",
+      "frame": {
+        "x": 57,
+        "y": 124,
+        "w": 61,
+        "h": 123
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 123
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 123
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng back 1",
+      "frame": {
+        "x": 114,
+        "y": 0,
+        "w": 61,
+        "h": 121
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng back 3",
+      "frame": {
+        "x": 0,
+        "y": 374,
+        "w": 61,
+        "h": 121
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng front 2",
+      "frame": {
+        "x": 58,
+        "y": 247,
+        "w": 61,
+        "h": 121
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side right 3",
+      "frame": {
+        "x": 118,
+        "y": 121,
+        "w": 58,
+        "h": 121
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 58,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 58,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side left 5",
+      "frame": {
+        "x": 175,
+        "y": 0,
+        "w": 57,
+        "h": 121
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 57,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng front 3",
+      "frame": {
+        "x": 232,
+        "y": 0,
+        "w": 61,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side left 2",
+      "frame": {
+        "x": 293,
+        "y": 0,
+        "w": 57,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 57,
+        "h": 120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side right 4",
+      "frame": {
+        "x": 0,
+        "y": 495,
+        "w": 57,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 58,
+        "h": 120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side left 4",
+      "frame": {
+        "x": 0,
+        "y": 615,
+        "w": 58,
+        "h": 119
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 58,
+        "h": 119
+      },
+      "sourceSize": {
+        "w": 58,
+        "h": 119
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng side right 2",
+      "frame": {
+        "x": 57,
+        "y": 495,
+        "w": 57,
+        "h": 119
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 119
+      },
+      "sourceSize": {
+        "w": 57,
+        "h": 119
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "ahbeng front 1",
+      "frame": {
+        "x": 61,
+        "y": 368,
+        "w": 61,
+        "h": 118
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 118
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 118
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "ahbeng.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 350,
+      "h": 734
+    },
+    "scale": 1
+  }
+}
