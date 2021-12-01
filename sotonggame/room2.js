@@ -120,12 +120,6 @@ class room2 extends Phaser.Scene {
     this.physics.add.overlap(
       this.player,
       this.ahlong,
-      // this.ahlong2,
-      // this.ahlong3,
-      // this.ahlong4,
-      // this.ahlong5,
-      // this.ahlong6,
-      // this.ahlong7,
       this.ahlongCaught,
       null,
       this
@@ -162,7 +156,7 @@ class room2 extends Phaser.Scene {
   }
 
   ahlongCaught(){
-  console.log("gameOverscene");
+  console.log("gameOver");
   this.scene.start("gameOver")
   }
 

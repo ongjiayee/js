@@ -77,7 +77,16 @@ class room1 extends Phaser.Scene {
 
     // camera follow player
     this.cameras.main.startFollow(this.player);
-  }
+  
+
+  this.physics.add.overlap(
+    this.player,
+    this.ahlong,
+    this.ahlongCaught,
+    null,
+    this
+  );
+}
 
   update() {
     if (this.player.x > 290 &&
@@ -106,6 +115,11 @@ class room1 extends Phaser.Scene {
       this.player.body.setVelocity(0, 0);
     }
   }
+
+  ahlongCaught(){
+    console.log("gameOver");
+    this.scene.start("gameOver")
+    }
 
   // Function to jump to world
   gameScene(player, title){

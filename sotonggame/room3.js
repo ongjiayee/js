@@ -139,7 +139,16 @@ class room3 extends Phaser.Scene {
 
     // camera follow player
     this.cameras.main.startFollow(this.player);
-  }
+  
+
+  this.physics.add.overlap(
+    this.player,
+    this.ahlong,
+    this.ahlongCaught,
+    null,
+    this
+  );
+}
 
   update() {
     if (this.player.x > 465 &&
@@ -168,6 +177,11 @@ class room3 extends Phaser.Scene {
       this.player.body.setVelocity(0, 0);
     }
   }
+
+  ahlongCaught(){
+    console.log("gameOver");
+    this.scene.start("gameOver")
+    }
 
   moveahlong() {
     console.log("ahlong-left");
