@@ -107,8 +107,8 @@ class gameScene extends Phaser.Scene {
 
     update () {
 
-      if (this.player.x > 318 &&
-         this.player.x < 322 &&
+      if (this.player.x > 310 &&
+         this.player.x < 330 &&
         this.player.y > 183 &&
         this.player.y < 200) {
           this.room1();
@@ -121,8 +121,8 @@ class gameScene extends Phaser.Scene {
            this.room2();
          }
 
-         if (this.player.x > 510 &&
-          this.player.x < 520 &&
+         if (this.player.x > 505 &&
+          this.player.x < 525 &&
          this.player.y > 170 &&
          this.player.y < 200) {
            this.room3();
@@ -131,22 +131,22 @@ class gameScene extends Phaser.Scene {
 
     if (this.cursors.left.isDown) 
     {
-        this.player.setVelocityX(-150);
+        this.player.setVelocityX(-500);
         this.player.anims.play('left', true);
     } 
     else if (this.cursors.right.isDown)
     {
-        this.player.setVelocityX(150);
+        this.player.setVelocityX(500);
         this.player.anims.play('right', true);
     }
     else if (this.cursors.up.isDown)
     {
-        this.player.setVelocityY(-150);
+        this.player.setVelocityY(-500);
         this.player.anims.play('up', true);
     }
     else if (this.cursors.down.isDown)
     {
-        this.player.setVelocityY(150);
+        this.player.setVelocityY(500);
         this.player.anims.play('down', true);
     } else {
         this.player.setVelocity(0);

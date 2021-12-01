@@ -55,7 +55,11 @@ class room1 extends Phaser.Scene {
     
     // this.add.sprite(100,500,"ahlong-frontAnim")
 
-    this.ahlong = this.physics.add.sprite(100,500,"ahlong-frontAnim").setScale(0.4);
+    this.ahlong = this.physics.add.sprite(100,500,"ahlong-front").setScale(0.5);
+    this.ahlong2 = this.physics.add.sprite(300,700,"ahlong-front").setScale(0.5);
+    this.ahlong3 = this.physics.add.sprite(600,1000,"ahlong-front").setScale(0.5);
+    this.ahlong4 = this.physics.add.sprite(200,1200,"ahlong-front").setScale(0.5);
+    this.ahlong5 = this.physics.add.sprite(500,300,"ahlong-front").setScale(0.5);
 
     this.houseLayer.setCollisionByExclusion(-1, true);
     this.physics.add.collider(this.player,this.houseLayer);
@@ -76,10 +80,10 @@ class room1 extends Phaser.Scene {
   }
 
   update() {
-    if (this.player.x > 318 &&
-      this.player.x < 322 &&
-     this.player.y > 183 &&
-     this.player.y < 185) {
+    if (this.player.x > 290 &&
+      this.player.x < 330 &&
+     this.player.y > 170 &&
+     this.player.y < 190) {
        this.gameScene();
      }
 

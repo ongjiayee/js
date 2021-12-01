@@ -41,15 +41,71 @@ class room2 extends Phaser.Scene {
     // Enable debugging
     window.player = this.player;
 
-    // this.time.addEvent({
-    //   delay:1000,
-    //   callback: this.moveahbeng1,
-    //   callbackScope: this,
-    //   loop:false,
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong,
+      callbackScope: this,
+      loop:false,
 
-    // });
+    });
 
-    // this.ahbeng = this.physics.add.sprite(100,500,"down").play('ahbeng').setScale(0.4);
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong2,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong3,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong4,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong5,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong6,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.time.addEvent({
+      delay:1000,
+      callback: this.moveahlong7,
+      callbackScope: this,
+      loop:false,
+
+    });
+
+    this.ahlong = this.physics.add.sprite(230,500,"ahlong-right").play('ahlong-right').setScale(0.5);
+    this.ahlong2 = this.physics.add.sprite(350,450,"ahlong-front").play('ahlong-front').setScale(0.5);
+    this.ahlong3 = this.physics.add.sprite(550,250,"ahlong-right").play('ahlong-right').setScale(0.5);
+    this.ahlong4 = this.physics.add.sprite(550,760,"ahlong-left").play('ahlong-left').setScale(0.5);
+    this.ahlong5 = this.physics.add.sprite(350,1030,"ahlong-front").play('ahlong-right').setScale(0.5);
+    this.ahlong6 = this.physics.add.sprite(230,800,"ahlong-right").play('ahlong-left').setScale(0.5);
+    this.ahlong7 = this.physics.add.sprite(550,1150,"ahlong-right").play('ahlong-right').setScale(0.5);
+    // this.ahlong8 = this.physics.add.sprite(230,500,"ahlong-right").play('ahlong-right').setScale(0.5);
+
 
     this.backgroundLayer.setCollisionByExclusion(-1, true);
     this.physics.add.collider(this.player,this.backgroundLayer);
@@ -88,6 +144,138 @@ class room2 extends Phaser.Scene {
       this.player.anims.stop();
       this.player.body.setVelocity(0, 0);
     }
+    
+  }
+
+  ahlongCaught(){
+  console.log("Late for classes, caught by the ahlong");
+  this.scene.start("gameover")
+  }
+
+  moveahlong() {
+    console.log("ahlong-right");
+    this.tweens.timeline({
+      targets: this.ahlong,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1000,
+      tweens: [
+        {
+          x: 100,
+        },
+        {
+          x: 230,
+        },
+      ],
+    });
+  }
+
+  moveahlong2() {
+    console.log("ahlong-front");
+    this.tweens.timeline({
+      targets: this.ahlong2,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1500,
+      tweens: [
+        {
+          y: 350,
+        },
+        {
+          y: 450,
+        },
+      ],
+    });
+  }
+
+  moveahlong3() {
+    console.log("ahlong-right");
+    this.tweens.timeline({
+      targets: this.ahlong3,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1000,
+      tweens: [
+        {
+          x: 420,
+        },
+        {
+          x: 550,
+        },
+      ],
+    });
+  }
+
+  moveahlong4() {
+    console.log("ahlong-left");
+    this.tweens.timeline({
+      targets: this.ahlong4,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1000,
+      tweens: [
+        {
+          x: 420,
+        },
+        {
+          x: 550,
+        },
+      ],
+    });
+  }
+
+  moveahlong5() {
+    console.log("ahlong-front");
+    this.tweens.timeline({
+      targets: this.ahlong5,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1500,
+      tweens: [
+        {
+          y: 930,
+        },
+        {
+          y: 1030,
+        },
+      ],
+    });
+  }
+
+  moveahlong6() {
+    console.log("ahlong-right");
+    this.tweens.timeline({
+      targets: this.ahlong6,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1000,
+      tweens: [
+        {
+          x: 80,
+        },
+        {
+          x: 230,
+        },
+      ],
+    });
+  }
+
+  moveahlong7() {
+    console.log("ahlong-right");
+    this.tweens.timeline({
+      targets: this.ahlong7,
+      ease: "Linear",
+      loop: -1, // loop forever
+      duration: 1500,
+      tweens: [
+        {
+          x: 420,
+        },
+        {
+          x: 550,
+        },
+      ],
+    });
   }
 
   // Function to jump to room1
