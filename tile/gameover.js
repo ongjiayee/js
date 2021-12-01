@@ -7,7 +7,7 @@ class gameOver extends Phaser.Scene {
 
 preload() {
 
-    this.load.image("img1", "assets/img1.png");
+    this.load.image("img1PNG", "assets/img1.png");
 }
 
     create () {
@@ -19,7 +19,7 @@ preload() {
         // this.add.text(10,500, 'Animation labs, press spacebar to continue', 
         //     { font: '12px Courier', fill: '#ffffff' });
 
-            this.add.image(320,320,'img1')
+            this.add.image(320,320,'img1PNG')
 
 
         var spaceDown = this.input.keyboard.addKey('SPACE');
