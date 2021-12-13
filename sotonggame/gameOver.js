@@ -21,8 +21,12 @@ preload() {
 
             this.add.image(320,320,'img2')
 
+            window.kuih=0
 
         var spaceDown = this.input.keyboard.addKey('SPACE');
+
+        window.key=0
+        window.heart=3
 
         spaceDown.on('down', function(){
             let playerPos = {};

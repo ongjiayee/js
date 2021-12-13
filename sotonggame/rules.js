@@ -29,7 +29,7 @@ preload() {
         playerPos.x = 320
         playerPos.y = 1050
         playerPos.dir = "up"
-            this.scene.start("gameScene",{playerPos: playerPos});
+            this.scene.start("instructions",{playerPos: playerPos});
             }, this );
 
     }

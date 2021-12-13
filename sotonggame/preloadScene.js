@@ -14,11 +14,21 @@ preload() {
     this.load.spritesheet('ahlong-left', 'assets/ahlong-side-left.png',{ frameWidth:66, frameHeight:104 });
     this.load.spritesheet('ahlong-right', 'assets/ahlong-side-right.png',{ frameWidth:66, frameHeight:104 });
     this.load.image("img1", "assets/img1.png");
+    
+    this.load.audio("bg1","assets/bg1.mp3" )
+    
 }
 
     create () {
 
-    
+      console.log("preloadScene")
+      
+      this.music = this.sound
+     .add("bg1", {
+  loop: true,
+})
+.setVolume(0.4);
+this.music.play();
 
         this.anims.create({
             key: "left",
@@ -100,7 +110,9 @@ preload() {
   });
 
 
-        console.log("preloadScene")
+        
+
+         
         
         // this.add.text(10,500, 'Animation labs, press spacebar to continue', 
         //     { font: '12px Courier', fill: '#ffffff' });

@@ -1,27 +1,25 @@
-class story extends Phaser.Scene {
+class instructions extends Phaser.Scene {
 
     constructor ()
     {
-        super({ key: 'story' });
+        super({ key: 'instructions' });
     }
 
 preload() {
 
     
-    this.load.image("img3", "assets/img3.png");
-
-    
+    this.load.image("img6", "assets/img6.png");
 }
 
     create () {
 
 
-        console.log("story")
+        console.log("instructions")
         
         // this.add.text(10,500, 'Animation labs, press spacebar to continue', 
         //     { font: '12px Courier', fill: '#ffffff' });
 
-            this.add.image(320,320,'img3')
+            this.add.image(320,320,'img6')
 
 
         var spaceDown = this.input.keyboard.addKey('SPACE');
@@ -31,9 +29,10 @@ preload() {
         playerPos.x = 320
         playerPos.y = 1050
         playerPos.dir = "up"
-            this.scene.start("rules",{playerPos: playerPos});
+            this.scene.start("gameScene",{playerPos: playerPos});
             }, this );
 
     }
 
 }
+window.heart = 3;

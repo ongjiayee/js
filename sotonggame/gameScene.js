@@ -24,11 +24,12 @@ class gameScene extends Phaser.Scene {
          this.load.image('playground', 'assets/playground.png')
          this.load.image('sky', 'assets/sky.png')
          this.load.image('wall', 'assets/wall.png')
+         this.load.image('kuih', 'assets/kuih.png')
+         this.load.image('heart', 'assets/heart.png')
 
-
-        // chars
-        // this.load.atlas("ahbeng", "assets/ahbeng.png", "assets/ahbeng.json");
-
+         this.load.audio("collectkuih","assets/collectkuih.wav" )
+         
+         
 
     } // end of preload //
 
@@ -36,21 +37,10 @@ class gameScene extends Phaser.Scene {
 
     console.log("gameScene")
 
+    this.collectkuihSnd = this.sound.add('collectkuih').setVolume(0.7);
+    
+
    var map = this.make.tilemap({key:'world'});
-
-  //  let dollTiles = map.addTilesetImage("doll", "dollPNG");
-  //  let doorTiles = map.addTilesetImage("door", "doorPNG");
-  //  let houseTiles = map.addTilesetImage("house", "housePNG");
-  //  let skyTiles = map.addTilesetImage("sky", "skyPNG");
-  //  let treeTiles = map.addTilesetImage("tree", "treePNG");
-  //  let wallTiles = map.addTilesetImage("wall", "wallPNG");
-
-  //  let tilesArray = [dollTiles];
-  //   let tilesArray = [doorTiles];
-  //   let tilesArray = [houseTiles];
-  //   let tilesArray = [skyTiles];
-  //   let tilesArray = [treeTiles];
-  //   let tilesArray = [wallTiles];
 
     var tileset1= map.addTilesetImage('door','door');
     var tileset2= map.addTilesetImage('house','house');
@@ -72,7 +62,38 @@ class gameScene extends Phaser.Scene {
   this.physics.world.bounds.width = this.sandLayer.width;
   this.physics.world.bounds.height = this.sandLayer.height;
 
+  //collectables
+  this.kuih = this.physics.add.sprite(100,300,'kuih').setScale(0.04);
+  this.kuih2 = this.physics.add.sprite(500,300,"kuih").setScale(0.04);
+  this.kuih3 = this.physics.add.sprite(400,700,'kuih').setScale(0.04);
+  this.kuih4 = this.physics.add.sprite(300,600,"kuih").setScale(0.04);
+  this.kuih5= this.physics.add.sprite(40,1000,'kuih').setScale(0.04);
   
+  this.heartpng1 = this.add.image (480,35,'heart').setScrollFactor(0).setVisible(true).setScale(0.1);
+  this.heartpng2 = this.add.image (530,35,'heart').setScrollFactor(0).setVisible(true).setScale(0.1);
+  this.heartpng3 = this.add.image (580,35,'heart').setScrollFactor(0).setVisible(true).setScale(0.1);
+
+  if ( window.heart === 3) {
+    this.heartpng1.setVisible(true);
+    this.heartpng2.setVisible(true);
+    this.heartpng3.setVisible(true);
+
+} else if ( window.heart === 2) {
+  this.heartpng1.setVisible(true);
+  this.heartpng2.setVisible(true);
+  this.heartpng3.setVisible(false);
+
+} else if ( window.heart === 1) {
+  this.heartpng1.setVisible(true);
+  this.heartpng2.setVisible(false);
+  this.heartpng3.setVisible(false);
+  
+  } else if (window.key === 0) {
+    this.heartpng1.setVisible(false);
+    this.heartpng2.setVisible(false);
+    this.heartpng3.setVisible(false);
+
+}
 
     // load player into phytsics
     this.player = this.physics.add.sprite(
@@ -102,10 +123,25 @@ class gameScene extends Phaser.Scene {
     // make the camera follow the player
     this.cameras.main.startFollow(this.player);
 
+    this.physics.add.overlap(this.player,this.kuih,this.collectKuih,null,this)
+    this.physics.add.overlap(this.player,this.kuih2,this.collectKuih,null,this)
+    this.physics.add.overlap(this.player,this.kuih3,this.collectKuih,null,this)
+    this.physics.add.overlap(this.player,this.kuih4,this.collectKuih,null,this)
+    this.physics.add.overlap(this.player,this.kuih5,this.collectKuih,null,this)
+   
+   
 
+    this.kuihScore = this.add.text(16,16, 'kuih: '+window.kuih, {fontSize: '25px', fill: '#000'}).setScrollFactor(0);
+  
     } // end of create //
 
-    update () {
+    update() {
+
+      if(window.kuih >= 300 )
+       {
+         this.scene.start("winningScene");
+       }
+
 
       if (this.player.x > 310 &&
          this.player.x < 330 &&
@@ -173,4 +209,21 @@ class gameScene extends Phaser.Scene {
       console.log("room3 function");
       this.scene.start("room3");
     }
-}
+
+    
+    collectKuih(player,kuih)
+    {
+      this.collectkuihSnd.play();
+
+      console.log('collect Kuih');
+      kuih.disableBody(true,true);
+    
+      window.kuih= window.kuih + 10;
+      console.log("kuih:", window.kuih);
+    
+      
+      this.kuihScore.setText('kuih:'+window.kuih);
+    }
+    
+    }
+   
